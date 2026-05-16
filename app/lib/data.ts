@@ -11,15 +11,8 @@ import { formatCurrency } from './utils';
 
 const sql = postgres(process.env.POSTGRES_URL!, { ssl: 'require' });
 
-// export async function testConnection() {
-//   try {
-//     const result = await sql`SELECT 1`;
-//     console.log("DB CONNECTED:", result);
-//   } catch (error) {
-//     console.error("DB ERROR:", error);
-//   }
-// }
 
+ 
 export async function fetchRevenue() {
   try {
     // We artificially delay a response for demo purposes.
