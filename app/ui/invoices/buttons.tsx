@@ -26,11 +26,9 @@ export function UpdateInvoice({ id }: { id: string }) {
 }
 
 export function DeleteInvoice({ id }: { id: string }) {
-  // 1. Definisikan variabel bind ID di sini terlebih dahulu sebelum return
   const deleteInvoiceWithId = deleteInvoice.bind(null, id);
 
   return (
-    // 2. Gunakan variabel di atas pada action, dan pastikan tag ditutup dengan </form>
     <form action={deleteInvoiceWithId}>
       <button type="submit" className="rounded-md border p-2 hover:bg-gray-100">
         <span className="sr-only">Delete</span>
