@@ -88,7 +88,6 @@ export async function updateInvoice(
     amount: formData.get('amount'),
     status: formData.get('status'),
   });
-
   if (!validatedFields.success) {
     return {
       errors: validatedFields.error.flatten().fieldErrors,
